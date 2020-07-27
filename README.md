@@ -2,7 +2,7 @@
 
 ## data_processing.py
 
-- .parquet : 檔案下載連結
+- .parquet : 檔案下載連結https://drive.google.com/drive/folders/1IeYoKJltNklte72Hk7kOJSd2x-WCMbrf?usp=sharing
 
 - shift_.parquet : 調整過事件時間順序之資料──前處理之時間單位  
 
