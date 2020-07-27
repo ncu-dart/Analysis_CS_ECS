@@ -20,8 +20,10 @@
 
 - 要做實驗二  
 
-  1. 請註解掉 create_dataset/ecs_create_dataset中 "label.append(mer.loc[i ,'cate_encode'])"  
-  2. 去掉註解 create_dataset/ecs_create_dataset中 "label.append(tb.tolist().index(mer.loc[i ,'time_bucket'].split(',')[1]))"  
+  1. 請註解掉  
+     create_dataset/ecs_create_dataset中 "label.append(mer.loc[i ,'cate_encode'])"  
+  2. 去掉註解  
+     create_dataset/ecs_create_dataset中 "label.append(tb.tolist().index(mer.loc[i ,'time_bucket'].split(',')[1]))"  
   3. 原.py中.csv生成得table是配合實驗一的結果寫的，要做實驗二請整段註解掉  
  
 ## training_experiment3.py
