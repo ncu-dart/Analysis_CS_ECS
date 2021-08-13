@@ -61,7 +61,10 @@ def do_dt_shift(df, uids):
     except:
         pass
     finally:
-        os.mkdir("./_tmp(all)")
+        try:
+            os.mkdir("./_tmp(all)")
+        except:
+            pass
 
 
     print("Start dt shift...")
@@ -172,7 +175,9 @@ TB = np.array([x.format(tl) for x in ["ECS,{}", "CS,{}"] for tl in time_bucket.k
 def add_columns(mer):
  
     mer['time'] = (mer['dt'] - mer['dt'].shift(1)).swifter.apply(lambda x : x)
-    mer['bucket'] = mer['time'].swifter.apply(lambda x : [k for k in time_bucket.keys() if x in time_bucket[k]])
+    #mer['bucket'] = mer['time'].swifter.apply(lambda x : [k for k in time_bucket.keys() if x in time_bucket[k]])
+    
+    mer['bucket'] = mer['time'].apply(lambda x : [k for k in time_bucket.keys() if x in time_bucket[k]])
     mer['last'] = mer['type'].shift(1).swifter.apply(lambda x : [ 'CS' if x in event_all_cate[0:11] else 'ECS'])
     mer['time_bucket'] = (mer['last']+mer['bucket']).swifter.apply(lambda x : x)
     mer['time_bucket'] = mer['time_bucket'].swifter.apply(lambda x:str(x))
@@ -316,7 +321,7 @@ uid2, uid3, max_dt2, max_dt3 = do_train_test_split("./csecs_shift_result/", 'CS_
 # In[35]:
 
 
-get_ipython().system('jupyter nbconvert — to script data_processing.ipynb')
+#get_ipython().system('jupyter nbconvert — to script data_processing.ipynb')
 
 
 # In[ ]:
