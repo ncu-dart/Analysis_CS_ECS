@@ -1,0 +1,15 @@
+.python-version
+Pre-processing/
+_days_cs/
+_days_cs_all/
+_days_cs_all_trevte/
+_days_cs_ecs/
+_days_cs_ecs_trevte/
+_days_cs_trevte/
+_tmp(all)/
+cs_shift_result/
+cs_shift_result_trevte/
+csall_shift_result/
+csall_shift_result_trevte/
+csecs_shift_result/
+csecs_shift_result_trevte/
