@@ -4,7 +4,7 @@
 
 1. Create a folder ```Pre-processing``` in the root folder of the project.
 1. Run ```python3 data_processin.py``` to generate training/validation/test datasets.
-1. Run ```python3 training_experiment1_2.py``` to conduct experiment 1.
+1. Run ```python3 training_experiment1.py``` to conduct experiment 1.
 1. Run ```python3 training_experiment2.py``` to conduct experiment 2.
 1. Run ```python3 training_experiment3.py``` to conduct experiment 3.
 
